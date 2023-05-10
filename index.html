@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card my-4">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="number"
+                                    class="form-control"
+                                    placeholder=""
+                                    aria-describedby="helpId"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label>Đổi số</label>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="changeNumber1"
+                                    class="form-control my-3"
+                                    placeholder="Vị trí 1"
+                                    aria-describedby="helpId"
+                                />
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="changeNumber2"
+                                    class="form-control"
+                                    placeholder="Vị trí 2"
+                                    aria-describedby="helpId"
+                                />
+                            </div>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="themSo()"
+                            >
+                                Thêm số
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="tongSoDuong()"
+                            >
+                                Tổng số dương
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="diemSoDuong()"
+                            >
+                                Điếm số dương
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="timSoNhoNhat()"
+                            >
+                                Tìm số nhỏ nhất
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="timSoDuongNhoNhat()"
+                            >
+                                Tìm số dương nhỏ nhất
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="timSoChanCuoiCung()"
+                            >
+                                Tìm số chẵn cuối cùng
+                            </button>
+                            <button class="btn btn-info my-2" onclick="doiSo()">
+                                Đổi số
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="xepTangDan()"
+                            >
+                                Xếp tăng dần
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="timSoNguyenToDauTien()"
+                            >
+                                Tìm số nguyên tố đầu tiên
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="demSoNguyen()"
+                            >
+                                Đếm số nguyên
+                            </button>
+                            <button
+                                class="btn btn-info my-2"
+                                onclick="soSanh()"
+                            >
+                                So sánh
+                            </button>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaThemSo"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaTongSoDuong"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaDemSoDuong"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaNhoNhat"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaDuongNhoNhat"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaSoChanCuoiCung"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaDoiSo"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaXepTangDan"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaTimSoNguyenToDauTien"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaDiemSoNguyen"
+                            ></p>
+                            <p
+                                class="alert alert-success"
+                                style="display: none"
+                                id="ketQuaSoSanh"
+                            ></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
